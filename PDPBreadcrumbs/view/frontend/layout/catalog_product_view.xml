@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © EAdesign by Eco Active S.R.L.,All rights reserved.
+ * See LICENSE for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="Nits_PDPBreadcrumbs/css/replace_breadcrumbs.css"/>
+		<link src="Nits_PDPBreadcrumbs/js/replace_breadcrumbs.js"/>
+	</head>
+	<body>
+		<referenceBlock name="page.main.title">
+			<block as="PDPBreadcrumbs"  class="Nits\PDPBreadcrumbs\Block\PDPBreadcrumbs" name="PDPBreadcrumbs" template="Nits_PDPBreadcrumbs::PDPBreadcrumbs.phtml"/>
+		</referenceBlock>
+		<move element="PDPBreadcrumbs" destination="page.main.title" before="page.main.title" />
+	</body>
+</page>

@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="cascaderack" translate="label" sortOrder="10000">
+            <label>CASCADE RACK</label>
+        </tab>
+        <section id="section_pdpbreadcrumbs" sortOrder="150" type="text" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>PDP Breadcrumbs</label>
+            <tab>cascaderack</tab>
+            <resource>Nits_PDPBreadcrumbs::pdpbreadcrumbs_configuration</resource>
+            <group id="group__pdpbreadcrumbs" translate="label" sortOrder="10" type="text" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>PDP Breadcrumbs</label>
+                <field id="enabled" translate="label" sortOrder="10" type="select" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="bad_categories" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>Exluded categories</label>
+                    <comment>Enter the IDs of the categories that will be excluded from PDP Breadcrumbs. ex:
+                        4,12,15,14,78
+                    </comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
